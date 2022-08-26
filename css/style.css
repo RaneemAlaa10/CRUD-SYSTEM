@@ -1,0 +1,45 @@
+span
+{
+    background-color: rgba(255, 255, 0,0.9)
+}
+.alert
+{
+    background-color: rgb(196, 0, 0);
+    color: white;
+}
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+}
+.Alert
+{
+    display: none;
+}
+.input-container
+{
+    position: relative;
+}
+#correct-name,#correct-cate,#correct-price,#wrong-name,#wrong-cate,#wrong-price
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    display: none;
+    
+}
+#correct-name,#correct-cate,#correct-price
+{
+    color: #50C878;
+}
+#wrong-name,#wrong-cate,#wrong-price
+{
+    color: 	rgb(196, 0, 0) ;
+}
+#updateInput
+{
+    display: none;
+}

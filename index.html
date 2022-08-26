@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CRUD System</title>
+
+</head>
+
+<body>
+    <!--Start of form-->
+    <div class="container my-5">
+        <div class="shadow card p-4 w-50 m-auto">
+            <h2 class="font-weight-light text-secondary">CRUD System</h2>
+            <!--Name Input-->
+            <label for="ProductName">Product Name</label>
+            <div class="input-container">
+                <input onkeydown="validateName(this.value)" onkeyup="validateName(this.value)" type="text"
+                    class="form-control" name="ProductName" id="ProductName">
+                <i class="fa-solid fa-check" id="correct-name"></i>
+                <i class="fa-solid fa-xmark" id="wrong-name"></i>
+                <!--Name Input Alert-->
+                <div id="nameAlert" class="Alert alert my-3 text-left">
+                    <span class="dot"></span> Please Enter Name Start With Capital Letter
+                </div>
+            </div>
+            <!--Category Input-->
+            <label for="ProductCategory">Product Category</label>
+            <div class="input-container">
+                <input onkeyup="ValidateCate(this.value)" onkeydown="ValidateCate(this.value)" type="text" class="form-control" name="ProductCategory" id="ProductCategory">
+                <i class="fa-solid fa-check" id="correct-cate"></i>
+                <i class="fa-solid fa-xmark" id="wrong-cate"></i>
+                <!--Category Input Alert-->
+                <div id="cateAlert" class="Alert alert my-3 text-left">
+                    <span class="dot"></span> Please fill this box
+                </div>
+            </div>
+            <!--Price Input-->
+            <label for="ProductPrice">Product Price</label>
+            <div class="input-container">
+                <input onkeyup="validatePrice(this.value)" onkeydown="validatePrice(this.value)" type="text" class="form-control" name="ProductPrice" id="ProductPrice">
+                <i class="fa-solid fa-check" id="correct-price"></i>
+                <i class="fa-solid fa-xmark" id="wrong-price"></i>
+                <!--Price Input Alert-->
+                <div id="priceAlert" class="Alert alert my-3 text-left">
+                    <span class="dot"></span> Please enter correct price
+                </div>
+            </div>
+            <!--Description Input-->
+            <label for="ProductDescription">ProductDescription</label>
+            <textarea name="ProductDescription" class="form-control" id="ProductDescription" cols="30"
+                onclick="validation()" rows="10"></textarea>
+            <button onclick="getData()" id="btn" class="btn btn-primary w-100 my-3" disabled>Add Product</button>
+        </div>
+    </div>
+    <!--End of form-->
+    <!--Start of Search Box-->
+    <div class="container">
+        <div class="search w-25 m-auto">
+            <input onkeyup="Search(this.value)" id="searchInput" class="form-control" type="search" placeholder="Search">
+        </div>
+    </div>
+    <!--End of Search Box-->
+    <!--Start of table of content-->
+    <div class="content my-5">
+        <table class="table w-75 m-auto table-hover text-center">
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+    </div>
+    <!--End of table of content-->
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
